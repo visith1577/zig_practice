@@ -44,6 +44,13 @@ pub fn main() void {
     // it do and why?
 
     // Printing all RPG characters in a loop:
+    chars[1] = Character{
+        .role = Role.bard,
+        .gold = 10,
+        .health = 100,
+        .experience = 20
+    };
+
     for (chars, 0..) |c, num| {
         std.debug.print("Character {} - G:{} H:{} XP:{}\n", .{
             num + 1, c.gold, c.health, c.experience,
